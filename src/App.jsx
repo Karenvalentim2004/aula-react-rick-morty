@@ -18,15 +18,17 @@ function App() {
     foto: "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
   }
 
-  const personagens = [item1,item2,item3]
+  const personagens = [item1, item2, item3]
 
   return (
     <>
-      {
-        personagens.map(function (umPersonagem) {
-          return <Card info={umPersonagem}/>
-        })
-      }
+      <div className='lista'>
+        {
+          personagens.map(function (umPersonagem) {
+            return <Card info={umPersonagem} />
+          })
+        }
+      </div>
 
     </>
   )
