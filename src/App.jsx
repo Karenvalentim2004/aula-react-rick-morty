@@ -18,14 +18,17 @@ function App() {
     foto: "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
   }
 
+  const personagens = [item1,item2,item3]
+
   return (
     <>
-      <Card info={item1} />
-      <Card info={item2} />
-      <Card info={item3} />
+      {
+        personagens.map(function (umPersonagem) {
+          return <Card info={umPersonagem}/>
+        })
+      }
 
     </>
   )
 }
-
 export default App
